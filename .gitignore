@@ -1,7 +1,6 @@
 __pycache__/
 *.pyc
 data/
-artifacts/task_a_checkpoint.pt
-artifacts/baseline/model.pt
+artifacts/baseline/
 attempts/*/task_b_model.pt
 attempts/*/code_snapshot.py

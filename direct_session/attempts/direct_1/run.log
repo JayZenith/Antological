@@ -1,0 +1,7 @@
+direct_1: Paired inverse-rotation rehearsal
+Epoch 1/5 complete: 469 updates, 60000 Task-B examples
+Epoch 2/5 complete: 469 updates, 60000 Task-B examples
+Epoch 3/5 complete: 469 updates, 60000 Task-B examples
+Epoch 4/5 complete: 469 updates, 60000 Task-B examples
+Epoch 5/5 complete: 469 updates, 60000 Task-B examples
+Final model saved and locked evaluation complete; metrics saved.

@@ -1,0 +1,16 @@
+Task B epoch 1/5: loss=0.360289593
+Task B epoch 2/5: loss=0.099928038
+Task B epoch 3/5: loss=0.066581067
+Task B epoch 4/5: loss=0.046614899
+Task B epoch 5/5: loss=0.036297117
+{
+  "A_before_B": 0.9782,
+  "A_after_B": 0.2684,
+  "B_after_B": 0.9774,
+  "forgetting": 0.7098,
+  "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+  "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+  "attempt_id": "baseline",
+  "condition": "baseline",
+  "mechanism": "ordinary Task-B cross-entropy training"
+}

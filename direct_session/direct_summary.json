@@ -1,0 +1,57 @@
+[
+  {
+    "A_before_B": 0.9782,
+    "A_after_B": 0.9776,
+    "B_after_B": 0.971,
+    "forgetting": 0.0005999999999999339,
+    "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+    "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+    "attempt_id": "direct_1",
+    "condition": "direct",
+    "mechanism": "Paired inverse-rotation rehearsal"
+  },
+  {
+    "A_before_B": 0.9782,
+    "A_after_B": 0.9768,
+    "B_after_B": 0.9695,
+    "forgetting": 0.0013999999999999568,
+    "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+    "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+    "attempt_id": "direct_2",
+    "condition": "direct",
+    "mechanism": "Original-view teacher distillation"
+  },
+  {
+    "A_before_B": 0.9782,
+    "A_after_B": 0.4537,
+    "B_after_B": 0.979,
+    "forgetting": 0.5245,
+    "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+    "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+    "attempt_id": "direct_3",
+    "condition": "direct",
+    "mechanism": "Task-A constrained Adam displacement"
+  },
+  {
+    "A_before_B": 0.9782,
+    "A_after_B": 0.5515,
+    "B_after_B": 0.945,
+    "forgetting": 0.42669999999999997,
+    "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+    "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+    "attempt_id": "direct_4",
+    "condition": "direct",
+    "mechanism": "Checkpoint-centered quadratic penalty"
+  },
+  {
+    "A_before_B": 0.9782,
+    "A_after_B": 0.8074,
+    "B_after_B": 0.9742,
+    "forgetting": 0.17079999999999995,
+    "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+    "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+    "attempt_id": "direct_5",
+    "condition": "direct",
+    "mechanism": "Original-view hidden-feature anchoring"
+  }
+]

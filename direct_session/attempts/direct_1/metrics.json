@@ -1,0 +1,11 @@
+{
+  "A_before_B": 0.9782,
+  "A_after_B": 0.9776,
+  "B_after_B": 0.971,
+  "forgetting": 0.0005999999999999339,
+  "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+  "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+  "attempt_id": "direct_1",
+  "condition": "direct",
+  "mechanism": "Paired inverse-rotation rehearsal"
+}

@@ -1,0 +1,22 @@
+{
+  "research.md": {
+    "bytes": 2492,
+    "sha256": "c9f90e5e6941c6d6a244748e13134ae78be269ae1c06cefe00a145a96ce9de2e"
+  },
+  "attempt.py": {
+    "bytes": 2325,
+    "sha256": "9c58b4fc2f0fd05f3cd7a904b610f8cfc6a994f0d66fd1edb997116006c6617c"
+  },
+  "model.pt": {
+    "bytes": 1080061,
+    "sha256": "43edb9e67d0139fd0630142b20594156650bd9db216ac266ee4912f90ccc8ecc"
+  },
+  "run.log": {
+    "bytes": 387,
+    "sha256": "0a7f95bb40303e2516e4d4bff2c75320835d51708847b6967458e79cdcbfedc2"
+  },
+  "metrics.json": {
+    "bytes": 390,
+    "sha256": "4441d1d6b0c5856a01b863a7723a6dd0909e06f2ad0c764907b62a21a41af4e8"
+  }
+}

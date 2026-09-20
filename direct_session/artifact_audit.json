@@ -1,0 +1,62 @@
+{
+  "attempts": [
+    {
+      "attempt_id": "direct_1",
+      "required_artifacts_verified": true,
+      "manifest_hashes_verified": true,
+      "model_structure_and_finiteness_verified": true,
+      "task_b_epochs": 5,
+      "updates_per_epoch": 469,
+      "task_b_examples_per_epoch": 60000,
+      "exact_import_bootstrap_verified": true,
+      "mechanism_name_matches_research": true
+    },
+    {
+      "attempt_id": "direct_2",
+      "required_artifacts_verified": true,
+      "manifest_hashes_verified": true,
+      "model_structure_and_finiteness_verified": true,
+      "task_b_epochs": 5,
+      "updates_per_epoch": 469,
+      "task_b_examples_per_epoch": 60000,
+      "exact_import_bootstrap_verified": true,
+      "mechanism_name_matches_research": true
+    },
+    {
+      "attempt_id": "direct_3",
+      "required_artifacts_verified": true,
+      "manifest_hashes_verified": true,
+      "model_structure_and_finiteness_verified": true,
+      "task_b_epochs": 5,
+      "updates_per_epoch": 469,
+      "task_b_examples_per_epoch": 60000,
+      "exact_import_bootstrap_verified": true,
+      "mechanism_name_matches_research": true
+    },
+    {
+      "attempt_id": "direct_4",
+      "required_artifacts_verified": true,
+      "manifest_hashes_verified": true,
+      "model_structure_and_finiteness_verified": true,
+      "task_b_epochs": 5,
+      "updates_per_epoch": 469,
+      "task_b_examples_per_epoch": 60000,
+      "exact_import_bootstrap_verified": true,
+      "mechanism_name_matches_research": true
+    },
+    {
+      "attempt_id": "direct_5",
+      "required_artifacts_verified": true,
+      "manifest_hashes_verified": true,
+      "model_structure_and_finiteness_verified": true,
+      "task_b_epochs": 5,
+      "updates_per_epoch": 469,
+      "task_b_examples_per_epoch": 60000,
+      "exact_import_bootstrap_verified": true,
+      "mechanism_name_matches_research": true
+    }
+  ],
+  "shared_checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+  "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+  "all_checks_passed": true
+}
