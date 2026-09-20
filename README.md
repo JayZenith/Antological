@@ -23,10 +23,13 @@ with unchanged prompts and no prewritten attempts.
 ## Setup
 
 ```bash
-python3 -m pip install -r requirements.txt
-mkdir -p direct_session/attempts analogy_session/attempts
-python3 validate.py
+./setup.sh
 ```
+
+`setup.sh` selects `/venv/main` automatically on the target GPU instance,
+installs the pinned dependencies from prebuilt binary wheels only, creates the
+empty research-attempt directories, and runs validation. Set `PYTHON_BIN` to
+override the Python interpreter.
 
 Train Task A once and run the fixed baseline:
 
