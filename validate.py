@@ -32,6 +32,8 @@ def main() -> None:
         assert "Read only this" in prompt
         assert "do not read the baseline implementation" in prompt
         assert "instruction-level isolation boundary" in prompt
+        assert "Path(__file__).resolve().parents[2]" in prompt
+        assert "sys.path.insert(0, str(SESSION_ROOT))" in prompt
         attempts = directory / "attempts"
         assert attempts.is_dir() and not any(attempts.iterdir()), f"Prewritten attempts in {directory_name}"
 

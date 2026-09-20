@@ -48,6 +48,22 @@ For attempt `n`, first save the complete research response verbatim at
 `attempts/direct_n/attempt.py` using `new_attempt(device)` and exactly `EPOCHS`
 Task-B epochs. Evaluate only through `evaluate_attempt(ctx)`.
 
+Because `attempt.py` is two directories below the session root, it must use
+this exact import bootstrap before importing the experiment API:
+
+```python
+import sys
+from pathlib import Path
+
+SESSION_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(SESSION_ROOT))
+
+from experiment import EPOCHS, device_from_arg, evaluate_attempt, new_attempt
+```
+
+This imports the session-level `experiment.py` symlink, which resolves to the
+single shared root infrastructure and root Task-A checkpoint.
+
 Save the exact executed source, final `model.pt`, unedited `run.log`, and
 unrounded `metrics.json`. Add `attempt_id`, `condition: "direct"`, and the
 mechanism name exactly as written in the research response. Preserve the
