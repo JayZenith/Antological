@@ -1,0 +1,73 @@
+{
+  "A_before_B": 0.9782,
+  "A_after_B": 0.881,
+  "B_after_B": 0.9762,
+  "forgetting": 0.09719999999999995,
+  "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+  "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+  "attempt_id": "analogy_4",
+  "condition": "analogy",
+  "mechanism_name": "Scheduled dormant-branch flushing",
+  "source_analogy": "Water-network maintenance: periodically flush low-use branches while the main network serves current demand.",
+  "translation": "Keep the first 1280 Task-A training examples as ten fixed batches of 128; on every fourth Task-B update, starting with update zero, add one-half of the cross-entropy on the next archive batch and cycle through the ten batches without shuffling.",
+  "epochs": 5,
+  "history": [
+    {
+      "epoch": 1,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.391608118279775,
+      "task_loss": 0.36657761469284694,
+      "archive_loss": 0.19898721474712178,
+      "archive_updates": 118,
+      "archive_cursor": 8,
+      "global_update": 469
+    },
+    {
+      "epoch": 2,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.10738898742198943,
+      "task_loss": 0.1019785794933637,
+      "archive_loss": 0.04335262699641733,
+      "archive_updates": 117,
+      "archive_cursor": 5,
+      "global_update": 938
+    },
+    {
+      "epoch": 3,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.06814780921538671,
+      "task_loss": 0.06600483235120773,
+      "archive_loss": 0.017171288872312788,
+      "archive_updates": 117,
+      "archive_cursor": 2,
+      "global_update": 1407
+    },
+    {
+      "epoch": 4,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.046892442629734674,
+      "task_loss": 0.0457239471912384,
+      "archive_loss": 0.00936294387245917,
+      "archive_updates": 117,
+      "archive_cursor": 9,
+      "global_update": 1876
+    },
+    {
+      "epoch": 5,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.03521306031942367,
+      "task_loss": 0.03448227015634378,
+      "archive_loss": 0.00582482090705248,
+      "archive_updates": 118,
+      "archive_cursor": 7,
+      "global_update": 2345
+    }
+  ],
+  "attempt_source_sha256": "0289a88f6b22c614fea9e30fed644b3188c3813dfa481a9096bb74345101cd91",
+  "model_sha256": "071127890713f581856b3454aedd26ca44d7d11cd3b0336408434425da825f23"
+}

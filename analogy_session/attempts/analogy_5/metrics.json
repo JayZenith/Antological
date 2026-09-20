@@ -1,0 +1,93 @@
+{
+  "A_before_B": 0.9782,
+  "A_after_B": 0.9233,
+  "B_after_B": 0.6532,
+  "forgetting": 0.05489999999999995,
+  "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+  "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+  "attempt_id": "analogy_5",
+  "condition": "analogy",
+  "mechanism_name": "Mooring-radius constraint",
+  "source_analogy": "Marine mooring: a vessel can respond to changing demands within the reach of a fixed-length tether anchored at its home position.",
+  "translation": "After every supplied Adam update on Task-B cross-entropy, project each parameter tensor onto a Euclidean ball centered at its initial Task-A value with radius equal to 10 percent of that tensor's initial Euclidean norm.",
+  "epochs": 5,
+  "history": [
+    {
+      "epoch": 1,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 1.1954492528915406,
+      "tensor_projections": 2746,
+      "displacement_fractions": {
+        "net.1.weight": 0.10000000149011612,
+        "net.1.bias": 0.10000001639127731,
+        "net.3.weight": 0.10000000149011612,
+        "net.3.bias": 0.09999999403953552,
+        "net.5.weight": 0.10000000149011612,
+        "net.5.bias": 0.09999999403953552
+      }
+    },
+    {
+      "epoch": 2,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 1.0808356475512186,
+      "tensor_projections": 2814,
+      "displacement_fractions": {
+        "net.1.weight": 0.10000000149011612,
+        "net.1.bias": 0.10000001639127731,
+        "net.3.weight": 0.10000000149011612,
+        "net.3.bias": 0.10000000149011612,
+        "net.5.weight": 0.10000000149011612,
+        "net.5.bias": 0.09999999403953552
+      }
+    },
+    {
+      "epoch": 3,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 1.0710621524175008,
+      "tensor_projections": 2814,
+      "displacement_fractions": {
+        "net.1.weight": 0.10000000149011612,
+        "net.1.bias": 0.09999999403953552,
+        "net.3.weight": 0.10000000149011612,
+        "net.3.bias": 0.10000000149011612,
+        "net.5.weight": 0.10000000149011612,
+        "net.5.bias": 0.09999999403953552
+      }
+    },
+    {
+      "epoch": 4,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 1.0858604438145956,
+      "tensor_projections": 2814,
+      "displacement_fractions": {
+        "net.1.weight": 0.10000001639127731,
+        "net.1.bias": 0.10000000149011612,
+        "net.3.weight": 0.10000000149011612,
+        "net.3.bias": 0.10000000894069672,
+        "net.5.weight": 0.10000000149011612,
+        "net.5.bias": 0.10000000894069672
+      }
+    },
+    {
+      "epoch": 5,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 1.071476993370056,
+      "tensor_projections": 2814,
+      "displacement_fractions": {
+        "net.1.weight": 0.10000000149011612,
+        "net.1.bias": 0.10000001639127731,
+        "net.3.weight": 0.10000000149011612,
+        "net.3.bias": 0.10000000149011612,
+        "net.5.weight": 0.10000000894069672,
+        "net.5.bias": 0.10000002384185791
+      }
+    }
+  ],
+  "attempt_source_sha256": "4b48058dd11930db8eb598699a9829c7bebd3f7bc39a29ce635102802b7537fb",
+  "model_sha256": "3eaee448f9f3590491ee4bac47b25f2f48e28d04804b8d1fdc86eed5d4ef068b"
+}

@@ -53,7 +53,8 @@ def main() -> None:
     ]
     for row in rows:
         lines.append(
-            f"| {row['attempt_id']} | {row['condition']} | {row['mechanism']} | "
+            f"| {row['attempt_id']} | {row['condition']} | "
+            f"{row.get('mechanism', row.get('mechanism_name', ''))} | "
             f"{row['A_before_B']:.6f} | {row['A_after_B']:.6f} | "
             f"{row['B_after_B']:.6f} | {row['forgetting']:.6f} |"
         )

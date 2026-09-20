@@ -1,0 +1,93 @@
+{
+  "A_before_B": 0.9782,
+  "A_after_B": 0.2946,
+  "B_after_B": 0.9763,
+  "forgetting": 0.6836,
+  "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+  "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+  "attempt_id": "analogy_2",
+  "condition": "analogy",
+  "mechanism_name": "Protected structural connections",
+  "source_analogy": "Building renovation: preserve designated load-bearing connections while adapting the remaining structure for a new use.",
+  "translation": "Within each parameter tensor, protect the half of entries with largest initial absolute magnitude, breaking ties by flattened index; train Task B using cross-entropy while masking protected gradients and restoring protected entries after every supplied Adam step.",
+  "epochs": 5,
+  "history": [
+    {
+      "epoch": 1,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.5805403882741929,
+      "protected_counts": {
+        "net.1.weight": 100352,
+        "net.1.bias": 128,
+        "net.3.weight": 32768,
+        "net.3.bias": 128,
+        "net.5.weight": 1280,
+        "net.5.bias": 5
+      },
+      "protected_invariant": true
+    },
+    {
+      "epoch": 2,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.1445117839495341,
+      "protected_counts": {
+        "net.1.weight": 100352,
+        "net.1.bias": 128,
+        "net.3.weight": 32768,
+        "net.3.bias": 128,
+        "net.5.weight": 1280,
+        "net.5.bias": 5
+      },
+      "protected_invariant": true
+    },
+    {
+      "epoch": 3,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.09990406369368235,
+      "protected_counts": {
+        "net.1.weight": 100352,
+        "net.1.bias": 128,
+        "net.3.weight": 32768,
+        "net.3.bias": 128,
+        "net.5.weight": 1280,
+        "net.5.bias": 5
+      },
+      "protected_invariant": true
+    },
+    {
+      "epoch": 4,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.07395273926854133,
+      "protected_counts": {
+        "net.1.weight": 100352,
+        "net.1.bias": 128,
+        "net.3.weight": 32768,
+        "net.3.bias": 128,
+        "net.5.weight": 1280,
+        "net.5.bias": 5
+      },
+      "protected_invariant": true
+    },
+    {
+      "epoch": 5,
+      "examples": 60000,
+      "steps": 469,
+      "loss": 0.057814176815748214,
+      "protected_counts": {
+        "net.1.weight": 100352,
+        "net.1.bias": 128,
+        "net.3.weight": 32768,
+        "net.3.bias": 128,
+        "net.5.weight": 1280,
+        "net.5.bias": 5
+      },
+      "protected_invariant": true
+    }
+  ],
+  "attempt_source_sha256": "7daa5e5ab4db51d747a4387936d40128cae5463710f6b998c5727cad99d376ab",
+  "model_sha256": "fb5ad4db0f2228ba0875e45b81e9e1cf30515c524d6b7f58491eb8fe708055ea"
+}

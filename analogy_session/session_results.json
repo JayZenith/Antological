@@ -1,0 +1,498 @@
+{
+  "condition": "analogy",
+  "attempt_count": 5,
+  "runs_per_attempt": 1,
+  "python": "/venv/main/bin/python",
+  "device": "cuda",
+  "working_directory": "/workspace/FrameShift/direct_session",
+  "checks": "All required artifacts, metadata, source/model hashes, five epochs, fixed Task-B counts, shared evaluator/checkpoint hashes and method-specific invariants passed.",
+  "attempts": [
+    {
+      "A_before_B": 0.9782,
+      "A_after_B": 0.9768,
+      "B_after_B": 0.9695,
+      "forgetting": 0.0013999999999999568,
+      "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+      "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+      "attempt_id": "analogy_1",
+      "condition": "analogy",
+      "mechanism_name": "Reference-panel conservation",
+      "source_analogy": "Art conservation: retain an untouched reference panel while restoring a working panel.",
+      "translation": "For every Task-B batch, train on its labels and preserve the frozen Task-A model's probability distribution on the same images rotated back to their original orientation, using temperature 2 and a temperature-squared KL penalty with coefficient 1.",
+      "epochs": 5,
+      "history": [
+        {
+          "epoch": 1,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.5977082731723785,
+          "task_loss": 0.44203105878035226,
+          "reference_loss": 0.15567721498944367
+        },
+        {
+          "epoch": 2,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.2116902273575465,
+          "task_loss": 0.1345520803531011,
+          "reference_loss": 0.07713814742962519
+        },
+        {
+          "epoch": 3,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.14495221784114837,
+          "task_loss": 0.08861510604222615,
+          "reference_loss": 0.056337111727396645
+        },
+        {
+          "epoch": 4,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.10986480813821156,
+          "task_loss": 0.06341769516070683,
+          "reference_loss": 0.046447113100687665
+        },
+        {
+          "epoch": 5,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.08650763165950776,
+          "task_loss": 0.04729040637811025,
+          "reference_loss": 0.03921722532113393
+        }
+      ],
+      "attempt_source_sha256": "47cd33d4fc756d9b861983470d1c563886dfbc63d28e726f0457f6d7ce7eedd6",
+      "model_sha256": "edd51012f43c8dad78b22a763c1b99a729c47ecf3f9be4eb4978046001b8a528"
+    },
+    {
+      "A_before_B": 0.9782,
+      "A_after_B": 0.2946,
+      "B_after_B": 0.9763,
+      "forgetting": 0.6836,
+      "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+      "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+      "attempt_id": "analogy_2",
+      "condition": "analogy",
+      "mechanism_name": "Protected structural connections",
+      "source_analogy": "Building renovation: preserve designated load-bearing connections while adapting the remaining structure for a new use.",
+      "translation": "Within each parameter tensor, protect the half of entries with largest initial absolute magnitude, breaking ties by flattened index; train Task B using cross-entropy while masking protected gradients and restoring protected entries after every supplied Adam step.",
+      "epochs": 5,
+      "history": [
+        {
+          "epoch": 1,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.5805403882741929,
+          "protected_counts": {
+            "net.1.weight": 100352,
+            "net.1.bias": 128,
+            "net.3.weight": 32768,
+            "net.3.bias": 128,
+            "net.5.weight": 1280,
+            "net.5.bias": 5
+          },
+          "protected_invariant": true
+        },
+        {
+          "epoch": 2,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.1445117839495341,
+          "protected_counts": {
+            "net.1.weight": 100352,
+            "net.1.bias": 128,
+            "net.3.weight": 32768,
+            "net.3.bias": 128,
+            "net.5.weight": 1280,
+            "net.5.bias": 5
+          },
+          "protected_invariant": true
+        },
+        {
+          "epoch": 3,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.09990406369368235,
+          "protected_counts": {
+            "net.1.weight": 100352,
+            "net.1.bias": 128,
+            "net.3.weight": 32768,
+            "net.3.bias": 128,
+            "net.5.weight": 1280,
+            "net.5.bias": 5
+          },
+          "protected_invariant": true
+        },
+        {
+          "epoch": 4,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.07395273926854133,
+          "protected_counts": {
+            "net.1.weight": 100352,
+            "net.1.bias": 128,
+            "net.3.weight": 32768,
+            "net.3.bias": 128,
+            "net.5.weight": 1280,
+            "net.5.bias": 5
+          },
+          "protected_invariant": true
+        },
+        {
+          "epoch": 5,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.057814176815748214,
+          "protected_counts": {
+            "net.1.weight": 100352,
+            "net.1.bias": 128,
+            "net.3.weight": 32768,
+            "net.3.bias": 128,
+            "net.5.weight": 1280,
+            "net.5.bias": 5
+          },
+          "protected_invariant": true
+        }
+      ],
+      "attempt_source_sha256": "7daa5e5ab4db51d747a4387936d40128cae5463710f6b998c5727cad99d376ab",
+      "model_sha256": "fb5ad4db0f2228ba0875e45b81e9e1cf30515c524d6b7f58491eb8fe708055ea"
+    },
+    {
+      "A_before_B": 0.9782,
+      "A_after_B": 0.422,
+      "B_after_B": 0.9778,
+      "forgetting": 0.5562,
+      "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+      "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+      "attempt_id": "analogy_3",
+      "condition": "analogy",
+      "mechanism_name": "Canal-wall deflection",
+      "source_analogy": "Canal navigation: a rigid bank removes the bank-directed component of a vessel's attempted movement while permitting tangential movement.",
+      "translation": "At each Task-B batch, compute the original-view labeled loss gradient, obtain the supplied Adam displacement from Task-B cross-entropy, and remove its component along that gradient only when the component would increase original-view loss to first order.",
+      "epochs": 5,
+      "history": [
+        {
+          "epoch": 1,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.36101006291309995,
+          "original_view_loss": 1.2294344390074412,
+          "projected_steps": 365
+        },
+        {
+          "epoch": 2,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.10002196861902873,
+          "original_view_loss": 1.913127924156189,
+          "projected_steps": 314
+        },
+        {
+          "epoch": 3,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.06528790522615115,
+          "original_view_loss": 2.036655516052246,
+          "projected_steps": 283
+        },
+        {
+          "epoch": 4,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.04619344811240832,
+          "original_view_loss": 2.279021460342407,
+          "projected_steps": 280
+        },
+        {
+          "epoch": 5,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.03519310220281283,
+          "original_view_loss": 2.51170757077535,
+          "projected_steps": 282
+        }
+      ],
+      "attempt_source_sha256": "ba5d56052e25a62fcdf6f78e9849f660c38dbe530ac2b4425b9e1667a63722c5",
+      "model_sha256": "5a808d16f880352c28473df28c022ba5e2865d7a445efba08050bdc88fcc2a2e"
+    },
+    {
+      "A_before_B": 0.9782,
+      "A_after_B": 0.881,
+      "B_after_B": 0.9762,
+      "forgetting": 0.09719999999999995,
+      "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+      "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+      "attempt_id": "analogy_4",
+      "condition": "analogy",
+      "mechanism_name": "Scheduled dormant-branch flushing",
+      "source_analogy": "Water-network maintenance: periodically flush low-use branches while the main network serves current demand.",
+      "translation": "Keep the first 1280 Task-A training examples as ten fixed batches of 128; on every fourth Task-B update, starting with update zero, add one-half of the cross-entropy on the next archive batch and cycle through the ten batches without shuffling.",
+      "epochs": 5,
+      "history": [
+        {
+          "epoch": 1,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.391608118279775,
+          "task_loss": 0.36657761469284694,
+          "archive_loss": 0.19898721474712178,
+          "archive_updates": 118,
+          "archive_cursor": 8,
+          "global_update": 469
+        },
+        {
+          "epoch": 2,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.10738898742198943,
+          "task_loss": 0.1019785794933637,
+          "archive_loss": 0.04335262699641733,
+          "archive_updates": 117,
+          "archive_cursor": 5,
+          "global_update": 938
+        },
+        {
+          "epoch": 3,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.06814780921538671,
+          "task_loss": 0.06600483235120773,
+          "archive_loss": 0.017171288872312788,
+          "archive_updates": 117,
+          "archive_cursor": 2,
+          "global_update": 1407
+        },
+        {
+          "epoch": 4,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.046892442629734674,
+          "task_loss": 0.0457239471912384,
+          "archive_loss": 0.00936294387245917,
+          "archive_updates": 117,
+          "archive_cursor": 9,
+          "global_update": 1876
+        },
+        {
+          "epoch": 5,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 0.03521306031942367,
+          "task_loss": 0.03448227015634378,
+          "archive_loss": 0.00582482090705248,
+          "archive_updates": 118,
+          "archive_cursor": 7,
+          "global_update": 2345
+        }
+      ],
+      "attempt_source_sha256": "0289a88f6b22c614fea9e30fed644b3188c3813dfa481a9096bb74345101cd91",
+      "model_sha256": "071127890713f581856b3454aedd26ca44d7d11cd3b0336408434425da825f23"
+    },
+    {
+      "A_before_B": 0.9782,
+      "A_after_B": 0.9233,
+      "B_after_B": 0.6532,
+      "forgetting": 0.05489999999999995,
+      "checkpoint_sha256": "05a45f578c40365a67e1fc7eaf8fbbab76e32e234833da352bc49b5795b9722c",
+      "infrastructure_sha256": "5bf408b12c4f92fc75bba176268f01a8c5bace36878f9acda6ed38a5c96f5fa5",
+      "attempt_id": "analogy_5",
+      "condition": "analogy",
+      "mechanism_name": "Mooring-radius constraint",
+      "source_analogy": "Marine mooring: a vessel can respond to changing demands within the reach of a fixed-length tether anchored at its home position.",
+      "translation": "After every supplied Adam update on Task-B cross-entropy, project each parameter tensor onto a Euclidean ball centered at its initial Task-A value with radius equal to 10 percent of that tensor's initial Euclidean norm.",
+      "epochs": 5,
+      "history": [
+        {
+          "epoch": 1,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 1.1954492528915406,
+          "tensor_projections": 2746,
+          "displacement_fractions": {
+            "net.1.weight": 0.10000000149011612,
+            "net.1.bias": 0.10000001639127731,
+            "net.3.weight": 0.10000000149011612,
+            "net.3.bias": 0.09999999403953552,
+            "net.5.weight": 0.10000000149011612,
+            "net.5.bias": 0.09999999403953552
+          }
+        },
+        {
+          "epoch": 2,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 1.0808356475512186,
+          "tensor_projections": 2814,
+          "displacement_fractions": {
+            "net.1.weight": 0.10000000149011612,
+            "net.1.bias": 0.10000001639127731,
+            "net.3.weight": 0.10000000149011612,
+            "net.3.bias": 0.10000000149011612,
+            "net.5.weight": 0.10000000149011612,
+            "net.5.bias": 0.09999999403953552
+          }
+        },
+        {
+          "epoch": 3,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 1.0710621524175008,
+          "tensor_projections": 2814,
+          "displacement_fractions": {
+            "net.1.weight": 0.10000000149011612,
+            "net.1.bias": 0.09999999403953552,
+            "net.3.weight": 0.10000000149011612,
+            "net.3.bias": 0.10000000149011612,
+            "net.5.weight": 0.10000000149011612,
+            "net.5.bias": 0.09999999403953552
+          }
+        },
+        {
+          "epoch": 4,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 1.0858604438145956,
+          "tensor_projections": 2814,
+          "displacement_fractions": {
+            "net.1.weight": 0.10000001639127731,
+            "net.1.bias": 0.10000000149011612,
+            "net.3.weight": 0.10000000149011612,
+            "net.3.bias": 0.10000000894069672,
+            "net.5.weight": 0.10000000149011612,
+            "net.5.bias": 0.10000000894069672
+          }
+        },
+        {
+          "epoch": 5,
+          "examples": 60000,
+          "steps": 469,
+          "loss": 1.071476993370056,
+          "tensor_projections": 2814,
+          "displacement_fractions": {
+            "net.1.weight": 0.10000000149011612,
+            "net.1.bias": 0.10000001639127731,
+            "net.3.weight": 0.10000000149011612,
+            "net.3.bias": 0.10000000149011612,
+            "net.5.weight": 0.10000000894069672,
+            "net.5.bias": 0.10000002384185791
+          }
+        }
+      ],
+      "attempt_source_sha256": "4b48058dd11930db8eb598699a9829c7bebd3f7bc39a29ce635102802b7537fb",
+      "model_sha256": "3eaee448f9f3590491ee4bac47b25f2f48e28d04804b8d1fdc86eed5d4ef068b"
+    }
+  ],
+  "artifact_manifest": {
+    "analogy_1": {
+      "research.md": {
+        "bytes": 3165,
+        "sha256": "a8c0b241f7539dc8a56265b414d38153fa79c4df2a231a391fedf2f2f7237927"
+      },
+      "attempt.py": {
+        "bytes": 2802,
+        "sha256": "47cd33d4fc756d9b861983470d1c563886dfbc63d28e726f0457f6d7ce7eedd6"
+      },
+      "model.pt": {
+        "bytes": 1080061,
+        "sha256": "edd51012f43c8dad78b22a763c1b99a729c47ecf3f9be4eb4978046001b8a528"
+      },
+      "run.log": {
+        "bytes": 2711,
+        "sha256": "322ac2faaa2d57c23e882ce49a30869d20e425fae13a498837dbb977dd8c4b3d"
+      },
+      "metrics.json": {
+        "bytes": 1972,
+        "sha256": "ced48119e6ecbd1c550e51726465b935da14c504072bcfd8ca82296fb338b775"
+      }
+    },
+    "analogy_2": {
+      "research.md": {
+        "bytes": 3446,
+        "sha256": "14f0e07d51a1816d6fcd385f39ba6e70c870a6053b7b4331afbb13949d1b0083"
+      },
+      "attempt.py": {
+        "bytes": 3126,
+        "sha256": "7daa5e5ab4db51d747a4387936d40128cae5463710f6b998c5727cad99d376ab"
+      },
+      "model.pt": {
+        "bytes": 1080061,
+        "sha256": "fb5ad4db0f2228ba0875e45b81e9e1cf30515c524d6b7f58491eb8fe708055ea"
+      },
+      "run.log": {
+        "bytes": 4049,
+        "sha256": "3a79739f85c241201c2ac8247f514b2c764747163f62e56594fa6666b1b06bc5"
+      },
+      "metrics.json": {
+        "bytes": 2800,
+        "sha256": "26a3a126e27bf4c88e22a14abfcf3882ed596c217bf6c0c8024146f2237e511f"
+      }
+    },
+    "analogy_3": {
+      "research.md": {
+        "bytes": 3510,
+        "sha256": "99aedaf7f41beaba6c981c2efe8967e6e4698e4c85ab85ee4e300d3bb01b9d9f"
+      },
+      "attempt.py": {
+        "bytes": 3248,
+        "sha256": "ba5d56052e25a62fcdf6f78e9849f660c38dbe530ac2b4425b9e1667a63722c5"
+      },
+      "model.pt": {
+        "bytes": 1080061,
+        "sha256": "5a808d16f880352c28473df28c022ba5e2865d7a445efba08050bdc88fcc2a2e"
+      },
+      "run.log": {
+        "bytes": 2668,
+        "sha256": "cafe0a50ff7edc33456d20c089c1d5ce76d7fa0db383dc58d6800f44d4525c3e"
+      },
+      "metrics.json": {
+        "bytes": 1968,
+        "sha256": "33e09aba9058e7904a40554e5390700655cf87ca63a4619a335196af476bf406"
+      }
+    },
+    "analogy_4": {
+      "research.md": {
+        "bytes": 3223,
+        "sha256": "0f6b249668280b9c70d4f095243610fb5fb99cb2d074b5ac44cba7c56aa9f3cf"
+      },
+      "attempt.py": {
+        "bytes": 3207,
+        "sha256": "0289a88f6b22c614fea9e30fed644b3188c3813dfa481a9096bb74345101cd91"
+      },
+      "model.pt": {
+        "bytes": 1080061,
+        "sha256": "071127890713f581856b3454aedd26ca44d7d11cd3b0336408434425da825f23"
+      },
+      "run.log": {
+        "bytes": 3476,
+        "sha256": "86cf05d823f1836598d2c9d8698c6a7ee9af7b4674bea7db0031f975b39d216e"
+      },
+      "metrics.json": {
+        "bytes": 2410,
+        "sha256": "57f1006b455f9ca963b85bfbbfa679280bd94fc8e8c784db0a0c139ba6ca32fc"
+      }
+    },
+    "analogy_5": {
+      "research.md": {
+        "bytes": 3295,
+        "sha256": "aa825bcca782c53bd5f3869bdb34485894d008a8fb6074601269441394e43de5"
+      },
+      "attempt.py": {
+        "bytes": 3340,
+        "sha256": "4b48058dd11930db8eb598699a9829c7bebd3f7bc39a29ce635102802b7537fb"
+      },
+      "model.pt": {
+        "bytes": 1080061,
+        "sha256": "3eaee448f9f3590491ee4bac47b25f2f48e28d04804b8d1fdc86eed5d4ef068b"
+      },
+      "run.log": {
+        "bytes": 4981,
+        "sha256": "abd1c8ac4d67051662097c85337b577ef2e8f296d49a371561a212915bb016f1"
+      },
+      "metrics.json": {
+        "bytes": 3252,
+        "sha256": "c9334f92d9efbb6789a63c13d991803c5cf3edb7d64aee27f4223c19d6df4755"
+      }
+    }
+  }
+}
