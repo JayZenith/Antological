@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/
+artifacts/task_a_checkpoint.pt
+attempts/*/task_b_model.pt
+attempts/*/code_snapshot.py
