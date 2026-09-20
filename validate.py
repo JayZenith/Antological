@@ -28,6 +28,10 @@ def main() -> None:
         assert shared_experiment.is_symlink(), f"{directory_name} must use the shared experiment.py"
         assert shared_experiment.resolve() == (ROOT / "experiment.py").resolve()
         assert hashlib.sha256(shared_experiment.read_bytes()).hexdigest() == infrastructure_hash
+        prompt = (directory / prompt_name).read_text()
+        assert "Read only this" in prompt
+        assert "do not read the baseline implementation" in prompt
+        assert "instruction-level isolation boundary" in prompt
         attempts = directory / "attempts"
         assert attempts.is_dir() and not any(attempts.iterdir()), f"Prewritten attempts in {directory_name}"
 

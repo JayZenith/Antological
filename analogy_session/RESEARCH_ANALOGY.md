@@ -5,6 +5,16 @@ That session must not read baseline or direct metrics, research artifacts, or
 mechanisms. Within this one session, complete exactly five attempts in order:
 `analogy_1` through `analogy_5`.
 
+## Instruction-level access boundary
+
+Read only this `RESEARCH_ANALOGY.md`, the shared root `experiment.py` exposed
+in this directory as `experiment.py`, and files you create inside this
+`analogy_session/` directory. Do not list, open, search, or inspect any other
+repository path. In particular, do not read the baseline implementation, the
+direct-session prompt or artifacts, root comparison/report files, or Git
+history. This is an instruction-level isolation boundary, not a filesystem
+sandbox.
+
 Do not generate all five methods in advance. When an attempt is reached,
 develop exactly one analogy and one resulting mechanism, save it, implement
 it, run it once, and finish all artifacts before beginning the next attempt.
