@@ -24,7 +24,10 @@ def main() -> None:
         directory = ROOT / directory_name
         assert directory.is_dir()
         assert {path.name for path in directory.iterdir()} == {"experiment.py", prompt_name, "attempts"}
-        assert hashlib.sha256((directory / "experiment.py").read_bytes()).hexdigest() == infrastructure_hash
+        shared_experiment = directory / "experiment.py"
+        assert shared_experiment.is_symlink(), f"{directory_name} must use the shared experiment.py"
+        assert shared_experiment.resolve() == (ROOT / "experiment.py").resolve()
+        assert hashlib.sha256(shared_experiment.read_bytes()).hexdigest() == infrastructure_hash
         attempts = directory / "attempts"
         assert attempts.is_dir() and not any(attempts.iterdir()), f"Prewritten attempts in {directory_name}"
 

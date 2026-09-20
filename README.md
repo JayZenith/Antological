@@ -13,8 +13,10 @@ with unchanged prompts and no prewritten attempts.
 
 - `experiment.py` — locked training and evaluation infrastructure
 - `baseline/attempt.py` — fixed ordinary Task-B fine-tuning baseline
-- `direct_session/` — direct-search prompt and isolated infrastructure
-- `analogy_session/` — analogy-search prompt and isolated infrastructure
+- `direct_session/` — direct-search prompt, empty attempt workspace, and a
+  symlink to the shared root infrastructure
+- `analogy_session/` — analogy-search prompt, empty attempt workspace, and a
+  symlink to the shared root infrastructure
 - `compare.py` — raw and pairwise comparison for all 11 completed runs
 - `validate.py` — integrity checks for the baseline and empty research sessions
 
@@ -32,6 +34,10 @@ Train Task A once and run the fixed baseline:
 python3 experiment.py train-a --device cuda
 python3 baseline/attempt.py --device cuda
 ```
+
+Both research sessions use the same root `experiment.py` through a symlink, so
+`new_attempt` reads the one Task-A checkpoint under root `artifacts/`. There are
+no copied infrastructure files or per-session Task-A checkpoints.
 
 Run the direct and analogy research conditions in their respective isolated
 directories using their local research instructions. After all ten research
