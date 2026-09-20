@@ -15,6 +15,15 @@ analogy-session prompt or artifacts, root comparison/report files, or Git
 history. This is an instruction-level isolation boundary, not a filesystem
 sandbox.
 
+## Fixed Python environment
+
+Use `/venv/main/bin/python` for every Python command and every attempt run. Do
+not use the system `python3`, create another virtual environment, or install,
+remove, or upgrade packages. The shared environment was prepared before this
+session from the pinned project requirements. If it is unavailable or CUDA is
+not available from it, stop and report the problem instead of changing the
+environment.
+
 Do not generate all five methods in advance. When an attempt is reached,
 develop exactly one approach, save it, implement it, run it once, and finish
 all artifacts before beginning the next attempt. Do not tune or replace a

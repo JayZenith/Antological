@@ -34,6 +34,9 @@ def main() -> None:
         assert "instruction-level isolation boundary" in prompt
         assert "Path(__file__).resolve().parents[2]" in prompt
         assert "sys.path.insert(0, str(SESSION_ROOT))" in prompt
+        assert "Use `/venv/main/bin/python` for every Python command" in prompt
+        assert "system `python3`" in prompt
+        assert "another virtual environment" in prompt
         attempts = directory / "attempts"
         assert attempts.is_dir() and not any(attempts.iterdir()), f"Prewritten attempts in {directory_name}"
 
